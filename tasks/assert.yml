@@ -272,7 +272,7 @@
   ansible.builtin.assert:
     that:
       - item.dump is defined
-      - item.dump is boolean
+      - item.dump is number
       - item.dump in [0, 1]
     quiet: yes
   loop: "{{ storage_mounts }}"
