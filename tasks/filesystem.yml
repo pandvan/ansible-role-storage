@@ -8,4 +8,4 @@
 - name: create filesystems
   community.general.filesystem:
     dev: "{{ filesystem.name }}"
-    fstype: "{{ filesystem.fstype | default(storage_default_fstype) }}"
+    fstype: "{{ filesystem.filesystem | default(storage_default_fstype) }}"
